@@ -1,0 +1,24 @@
+import java.sql.SQLOutput;
+import java.util.*;
+
+
+public  class Sorting {
+    public static void main(String args[]) {
+      int[] array = {6, 2, 5, 11, 1};
+      for (int i =0; i< array.length-1; i++ ){
+          int smalllest = i;
+          for(int j = i+1; j<array.length-1; j++ ){
+              if (array[j] < array[smalllest]){
+                  smalllest  = j;
+
+              }
+          }
+          int temp = array[smalllest];
+          array[smalllest] = array[i];
+          array[i] = temp;
+
+      }
+        for (int i = 0; i<array.length-1; i++){
+            System.out.println(array[i]);
+        }
+    }}
