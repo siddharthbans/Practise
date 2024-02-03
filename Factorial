@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Reurs {
+    public static int fctorial(int n) {
+        if (n<0){
+            return 0;
+        }
+        if (n==0 || n==1){
+            return 1;
+        }
+
+        return  n * fctorial(n -1);
+
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int i = fctorial(n);
+        fctorial(n);
+        System.out.println(i);
+
+
+    }}
