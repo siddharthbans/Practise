@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Reurs {
+    public static void SumtoN(int i, int n, int sum){
+        if (i>n){
+            System.out.println("this is not valid");
+            return;
+        }
+        if (i==n){
+            sum+=i;
+            System.out.println(sum);
+            return;
+        }
+        sum+=i;
+        SumtoN(i+1, n, sum);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        int n = sc.nextInt();
+        int sum = 0;
+        SumtoN(i, n, sum);
+
+
+    }}
