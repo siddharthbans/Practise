@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Reurs {
+    public static void TowerOfHinoi(int n, String source, String helper, String destination) {
+        if (n==1){
+            System.out.println("transfer disk from " + n + " from " + source + " to " + destination + "uuu");
+            return;
+
+        }
+
+        TowerOfHinoi(n-1, source, destination, helper);
+        System.out.println("transfer disk from " + n + " from " + source + " to " + destination);
+        TowerOfHinoi(n-1, helper, source, destination);
+
+
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        TowerOfHinoi(n, "Souce", "helper", "Desitnation");
+
+
+    }}
