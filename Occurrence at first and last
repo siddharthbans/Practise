@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Reurs {
+    public static int First = -1;
+    public static int Last = -1;
+
+    public static void Occurance(String n, char Target, int index) {
+        if (index==n.length()){
+            System.out.println("smallest index is " + First + "Last index is " + Last);
+            return;
+        }
+        char current = n.charAt(index);
+        if (current == Target){
+            if (First ==-1){
+                First = index;
+
+            }
+            else {
+                Last = index;
+            }
+        }
+
+        Occurance(n, Target, index +1 );
+
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next();
+        Occurance(n, 'a' , 0);
+
+
+
+
+
+    }}
