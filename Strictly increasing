@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Reurs {
+
+
+    public static void StrictlyIncreasing(int[] arr, int n) {
+        if (n == arr.length-1){
+            System.out.println("this is increasing");
+            return;
+
+        }
+        if (arr[n + 1] >= arr[n]) {
+            StrictlyIncreasing(arr, n+1);
+        }
+        else {
+            System.out.println("this is incosistent");
+            return;
+        }
+    }
+    public static void main(String[] args) {
+     int[] arr = {1,2,3,4,5};
+     int a=0;
+     StrictlyIncreasing(arr, a );
+
+
+
+
+    }}
