@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Reurs {
+
+
+    public static void Permuttion(String old, int index, String updated) {
+        if (old.length()==0){
+            System.out.println(updated);
+            return;
+        }
+
+        for (int i = 0; i<old.length(); i++){
+            char current = old.charAt(i);
+            String newstr = old.substring(0, i) + old.substring(i+1);
+            Permuttion(newstr, index+1, updated+ current);
+
+        }
+
+
+
+    }
+    public static void main(String[] args) {
+        String str = "abcde";
+        Permuttion(str, 0, "");
+
+
+
+    }}
